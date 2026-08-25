@@ -219,3 +219,6 @@ __marimo__/
 
 # Ignore Sensitive Personal Information (SPI)
 spi/
+
+# Ignore API Keys and other secrets
+.env
