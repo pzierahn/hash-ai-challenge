@@ -1,0 +1,1673 @@
+{
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "long"
+            },
+            "parent_id": {
+                "type": "long"
+            },
+            "created_at": {
+                "type": "date"
+            },
+            "updated_at": {
+                "type": "date"
+            },
+            "checked_at": {
+                "type": "date"
+            },
+            "changed_at": {
+                "type": "date"
+            },
+            "processed_at": {
+                "type": "date"
+            },
+            "experience_change_last_identified_at": {
+                "type": "date"
+            },
+            "is_deleted": {
+                "type": "byte"
+            },
+            "is_parent": {
+                "type": "byte"
+            },
+            "public_profile_id": {
+                "type": "long"
+            },
+            "profile_score": {
+                "type": "double"
+            },
+            "professional_network_url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "professional_network_shorthand_names": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "professional_network_canonical_shorthand_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "facebook_url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "twitter_url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "financial_website_url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "website": {
+                "type": "text",
+                "fields": {
+                    "domain_only": {
+                        "type": "text"
+                    },
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "historical_ids": {
+                "type": "text"
+            },
+            "full_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "first_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "first_name_initial": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "middle_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "middle_name_initial": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "last_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "last_name_initial": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "headline": {
+                "type": "text"
+            },
+            "summary": {
+                "type": "text"
+            },
+            "picture_url": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "location_country": {
+                "type": "keyword",
+                "null_value": "NULL"
+            },
+            "location_country_iso2": {
+                "type": "keyword",
+                "null_value": "NULL"
+            },
+            "location_country_iso3": {
+                "type": "keyword",
+                "null_value": "NULL"
+            },
+            "location_full": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "location_regions": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "interests": {
+                "type": "text"
+            },
+            "inferred_skills": {
+                "type": "text"
+            },
+            "historical_skills": {
+                "type": "text"
+            },
+            "connections_count": {
+                "type": "long"
+            },
+            "followers_count": {
+                "type": "long"
+            },
+            "post_frequency_yearly": {
+                "type": "double"
+            },
+            "posting_recency": {
+                "type": "date"
+            },
+            "engagement_per_post": {
+                "type": "double"
+            },
+            "influence_score": {
+                "type": "double"
+            },
+            "services": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "primary_professional_email": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "primary_professional_email_status": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "professional_emails_collection": {
+                "type": "nested",
+                "properties": {
+                    "professional_email": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "professional_email_status": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "order_of_priority": {
+                        "type": "short"
+                    }
+                }
+            },
+            "is_working": {
+                "type": "byte"
+            },
+            "active_experience_company_id": {
+                "type": "long"
+            },
+            "active_experience_company_website": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    },
+                    "domain_only": {
+                        "type": "text"
+                    }
+                }
+            },
+            "active_experience_company_shorthand_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "active_experience_company_logo_url": {
+                "type": "text",
+                "index": false
+            },
+            "active_experience_title": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "active_experience_description": {
+                "type": "text"
+            },
+            "active_experience_department": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "active_experience_management_level": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "is_decision_maker": {
+                "type": "byte"
+            },
+            "total_experience_duration_months": {
+                "type": "long"
+            },
+            "total_experience_duration_months_breakdown_department": {
+                "type": "nested",
+                "properties": {
+                    "department": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "total_experience_duration_months": {
+                        "type": "long"
+                    }
+                }
+            },
+            "total_experience_duration_months_breakdown_management_level": {
+                "type": "nested",
+                "properties": {
+                    "management_level": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "total_experience_duration_months": {
+                        "type": "long"
+                    }
+                }
+            },
+            "months_in_management": {
+                "type": "long"
+            },
+            "tenure_stats": {
+                "properties": {
+                    "avg_tenure_months": {
+                        "type": "double"
+                    },
+                    "median_tenure": {
+                        "type": "double"
+                    },
+                    "current_tenure": {
+                        "type": "double"
+                    },
+                    "longest_tenure": {
+                        "type": "double"
+                    }
+                }
+            },
+            "internal_promotion_rate": {
+                "properties": {
+                    "promotion_count": {
+                        "type": "integer"
+                    },
+                    "avg_months_per_promotion": {
+                        "type": "double"
+                    },
+                    "recently_promoted": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "experience": {
+                "type": "nested",
+                "properties": {
+                    "id": {
+                        "type": "keyword",
+                        "index": false,
+                        "doc_values": false
+                    },
+                    "active_experience": {
+                        "type": "byte"
+                    },
+                    "position_title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "department": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "management_level": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "location": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "date_from": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_from_year": {
+                        "type": "short"
+                    },
+                    "date_from_month": {
+                        "type": "byte"
+                    },
+                    "date_to": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_to_year": {
+                        "type": "short"
+                    },
+                    "date_to_month": {
+                        "type": "byte"
+                    },
+                    "duration_months": {
+                        "type": "short"
+                    },
+                    "company_id": {
+                        "type": "long"
+                    },
+                    "company_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_type": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_founded_year": {
+                        "type": "short"
+                    },
+                    "company_followers_count": {
+                        "type": "long"
+                    },
+                    "company_website": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "company_facebook_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_twitter_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_professional_network_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_logo_url": {
+                        "type": "text",
+                        "index": false
+                    },
+                    "company_size_range": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    },
+                    "company_employees_count": {
+                        "type": "long"
+                    },
+                    "company_industry": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_categories_and_keywords": {
+                        "type": "text"
+                    },
+                    "company_annual_revenue_source_5": {
+                        "type": "long"
+                    },
+                    "company_annual_revenue_currency_source_5": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_annual_revenue_source_1": {
+                        "type": "double"
+                    },
+                    "company_annual_revenue_currency_source_1": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_employees_count_change_yearly_percentage": {
+                        "type": "double"
+                    },
+                    "company_last_funding_round_date": {
+                        "type": "date"
+                    },
+                    "company_last_funding_round_amount_raised": {
+                        "type": "long"
+                    },
+                    "company_hq_full_address": {
+                        "type": "text"
+                    },
+                    "company_hq_country": {
+                        "type": "keyword"
+                    },
+                    "company_hq_regions": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_hq_country_iso2": {
+                        "type": "keyword"
+                    },
+                    "company_hq_country_iso3": {
+                        "type": "keyword"
+                    },
+                    "company_hq_city": {
+                        "type": "text"
+                    },
+                    "company_hq_state": {
+                        "type": "text"
+                    },
+                    "company_hq_street": {
+                        "type": "text"
+                    },
+                    "company_hq_zipcode": {
+                        "type": "text"
+                    },
+                    "company_last_updated_at": {
+                        "type": "date"
+                    },
+                    "company_stock_ticker": {
+                        "type": "nested",
+                        "properties": {
+                            "exchange": {
+                                "type": "text",
+                                "fields": {
+                                    "exact": {
+                                        "type": "keyword",
+                                        "null_value": "NULL"
+                                    }
+                                }
+                            },
+                            "ticker": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "company_is_b2b": {
+                        "type": "byte"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "projected_base_salary_p25": {
+                "type": "double",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_base_salary_median": {
+                "type": "double",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_base_salary_p75": {
+                "type": "double",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_base_salary_period": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_base_salary_currency": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_base_salary_updated_at": {
+                "type": "date",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_additional_salary": {
+                "type": "nested",
+                "properties": {
+                    "projected_additional_salary_type": {
+                        "type": "keyword",
+                        "index": false,
+                        "doc_values": false
+                    },
+                    "projected_additional_salary_p25": {
+                        "type": "double",
+                        "index": false,
+                        "doc_values": false
+                    },
+                    "projected_additional_salary_median": {
+                        "type": "double",
+                        "index": false,
+                        "doc_values": false
+                    },
+                    "projected_additional_salary_p75": {
+                        "type": "double",
+                        "index": false,
+                        "doc_values": false
+                    }
+                }
+            },
+            "projected_additional_salary_period": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_additional_salary_currency": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_additional_salary_updated_at": {
+                "type": "date",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_total_salary_p25": {
+                "type": "double",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_total_salary_median": {
+                "type": "double",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_total_salary_p75": {
+                "type": "double",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_total_salary_period": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_total_salary_currency": {
+                "type": "keyword",
+                "index": false,
+                "doc_values": false
+            },
+            "projected_total_salary_updated_at": {
+                "type": "date",
+                "index": false,
+                "doc_values": false
+            },
+            "last_graduation_date": {
+                "type": "short"
+            },
+            "institution_ranking_score": {
+                "type": "double"
+            },
+            "education_degrees": {
+                "type": "text"
+            },
+            "education": {
+                "type": "nested",
+                "properties": {
+                    "id": {
+                        "type": "keyword",
+                        "index": false,
+                        "doc_values": false
+                    },
+                    "degree": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "institution_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "institution_website": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "institution_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "institution_id": {
+                        "type": "long"
+                    },
+                    "institution_full_address": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "institution_country_iso2": {
+                        "type": "keyword"
+                    },
+                    "institution_country_iso3": {
+                        "type": "keyword"
+                    },
+                    "institution_regions": {
+                        "type": "text"
+                    },
+                    "institution_city": {
+                        "type": "text"
+                    },
+                    "institution_state": {
+                        "type": "text"
+                    },
+                    "institution_street": {
+                        "type": "text"
+                    },
+                    "institution_zipcode": {
+                        "type": "text"
+                    },
+                    "institution_logo_url": {
+                        "type": "text",
+                        "index": false
+                    },
+                    "date_from_year": {
+                        "type": "short"
+                    },
+                    "date_to_year": {
+                        "type": "short"
+                    },
+                    "activities_and_societies": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "recommendations_count": {
+                "type": "long"
+            },
+            "recommendations": {
+                "type": "nested",
+                "properties": {
+                    "recommendation": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "referee_full_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "referee_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "activity": {
+                "type": "nested",
+                "properties": {
+                    "activity_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "created_at": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+                    },
+                    "updated_at": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "awards_count": {
+                "type": "long"
+            },
+            "awards": {
+                "type": "nested",
+                "properties": {
+                    "title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "issuer": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "description": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "date": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_year": {
+                        "type": "integer"
+                    },
+                    "date_month": {
+                        "type": "integer"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "courses": {
+                "type": "nested",
+                "properties": {
+                    "organizer": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "certifications_count": {
+                "type": "long"
+            },
+            "certifications": {
+                "type": "nested",
+                "properties": {
+                    "title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "issuer": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "issuer_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "credential_id": {
+                        "type": "keyword"
+                    },
+                    "certificate_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "certificate_logo_url": {
+                        "type": "text",
+                        "index": false
+                    },
+                    "date_from": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_from_year": {
+                        "type": "integer"
+                    },
+                    "date_from_month": {
+                        "type": "integer"
+                    },
+                    "date_to": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_to_year": {
+                        "type": "integer"
+                    },
+                    "date_to_month": {
+                        "type": "integer"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "languages": {
+                "type": "nested",
+                "properties": {
+                    "language": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "proficiency": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "patents_count": {
+                "type": "long"
+            },
+            "patents_topics": {
+                "type": "text"
+            },
+            "patents": {
+                "type": "nested",
+                "properties": {
+                    "title": {
+                        "type": "text"
+                    },
+                    "status": {
+                        "type": "text"
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "patent_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "date": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_year": {
+                        "type": "short"
+                    },
+                    "date_month": {
+                        "type": "byte"
+                    },
+                    "patent_number": {
+                        "type": "keyword"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "publications_count": {
+                "type": "long"
+            },
+            "publications_topics": {
+                "type": "text"
+            },
+            "publications": {
+                "type": "nested",
+                "properties": {
+                    "title": {
+                        "type": "text"
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "publication_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "publisher_names": {
+                        "type": "text"
+                    },
+                    "date": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_year": {
+                        "type": "short"
+                    },
+                    "date_month": {
+                        "type": "short"
+                    },
+                    "order_in_profile": {
+                        "type": "long"
+                    }
+                }
+            },
+            "projects_count": {
+                "type": "long"
+            },
+            "projects_topics": {
+                "type": "text"
+            },
+            "projects": {
+                "type": "nested",
+                "properties": {
+                    "name": {
+                        "type": "text"
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "project_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "date_from": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_from_year": {
+                        "type": "short"
+                    },
+                    "date_from_month": {
+                        "type": "byte"
+                    },
+                    "date_to": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_to_year": {
+                        "type": "short"
+                    },
+                    "date_to_month": {
+                        "type": "byte"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "organizations": {
+                "type": "nested",
+                "properties": {
+                    "organization_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "position": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "date_from": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_from_year": {
+                        "type": "short"
+                    },
+                    "date_from_month": {
+                        "type": "byte"
+                    },
+                    "date_to": {
+                        "type": "date",
+                        "format": "MMMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_to_year": {
+                        "type": "short"
+                    },
+                    "date_to_month": {
+                        "type": "byte"
+                    },
+                    "order_in_profile": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "personal_investments": {
+                "type": "nested",
+                "properties": {
+                    "announced_date": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd"
+                    },
+                    "company_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "lead_investor": {
+                        "type": "long"
+                    },
+                    "funding_round": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "amount_raised": {
+                        "type": "long"
+                    }
+                }
+            },
+            "partner_investments": {
+                "type": "nested",
+                "properties": {
+                    "announced_date": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd"
+                    },
+                    "company_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "lead_investor": {
+                        "type": "long"
+                    },
+                    "funding_round": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "amount_raised": {
+                        "type": "long"
+                    },
+                    "investor_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    }
+                }
+            },
+            "exits": {
+                "type": "nested",
+                "properties": {
+                    "company_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_description": {
+                        "type": "text"
+                    }
+                }
+            },
+            "events": {
+                "type": "nested",
+                "properties": {
+                    "name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "role": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "date": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd"
+                    },
+                    "location": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    }
+                }
+            },
+            "profile_root_field_changes_summary": {
+                "type": "nested",
+                "properties": {
+                    "field_name": {
+                        "type": "keyword"
+                    },
+                    "change_type": {
+                        "type": "keyword"
+                    },
+                    "last_changed_at": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+                    }
+                }
+            },
+            "profile_collection_field_changes_summary": {
+                "type": "nested",
+                "properties": {
+                    "field_name": {
+                        "type": "keyword"
+                    },
+                    "last_changed_at": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+                    }
+                }
+            },
+            "experience_recently_started": {
+                "type": "nested",
+                "properties": {
+                    "company_id": {
+                        "type": "long"
+                    },
+                    "company_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "company_shorthand_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "date_from": {
+                        "type": "date",
+                        "format": "MMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_to": {
+                        "type": "date",
+                        "format": "MMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "identification_date": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+                    }
+                }
+            },
+            "experience_recently_closed": {
+                "type": "nested",
+                "properties": {
+                    "company_id": {
+                        "type": "long"
+                    },
+                    "company_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "company_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            },
+                            "domain_only": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "company_shorthand_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "date_from": {
+                        "type": "date",
+                        "format": "MMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "date_to": {
+                        "type": "date",
+                        "format": "MMM uuuu||uuuu",
+                        "locale": "en",
+                        "ignore_malformed": true
+                    },
+                    "title": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword",
+                                "null_value": "NULL"
+                            }
+                        }
+                    },
+                    "identification_date": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm:ss.SSSSSS"
+                    }
+                }
+            },
+            "location_city": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            },
+            "location_state": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword",
+                        "null_value": "NULL"
+                    }
+                }
+            }
+        }
+    }
+}

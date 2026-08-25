@@ -1,0 +1,198 @@
+{
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "keyword"
+            },
+            "url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "author_name": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "author_profile_url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "employee_parent_id": {
+                "type": "long"
+            },
+            "author_headline": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "author_posts_count": {
+                "type": "long"
+            },
+            "date_published": {
+                "type": "date",
+                "format": "yyyy-MM-dd"
+            },
+            "article_body": {
+                "type": "text"
+            },
+            "image_url": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "hashtags": {
+                "type": "text",
+                "fields": {
+                    "exact": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "mentions": {
+                "type": "nested",
+                "properties": {
+                    "full_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    }
+                }
+            },
+            "reaction_count": {
+                "type": "long"
+            },
+            "comment_count": {
+                "type": "long"
+            },
+            "comments": {
+                "type": "nested",
+                "properties": {
+                    "full_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "headline": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "profile_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "body": {
+                        "type": "text"
+                    },
+                    "reaction_count": {
+                        "type": "long"
+                    },
+                    "date_published": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd"
+                    }
+                }
+            },
+            "reshared_post": {
+                "type": "nested",
+                "properties": {
+                    "id": {
+                        "type": "keyword"
+                    },
+                    "url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "author_name": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "author_profile_url": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "employee_parent_id": {
+                        "type": "long"
+                    },
+                    "author_headline": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "date_published": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd"
+                    },
+                    "article_body": {
+                        "type": "text"
+                    },
+                    "image_url": {
+                        "type": "text",
+                        "index": false
+                    },
+                    "hashtags": {
+                        "type": "text",
+                        "fields": {
+                            "exact": {
+                                "type": "keyword"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
