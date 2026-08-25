@@ -19,3 +19,8 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["recruit"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+]
