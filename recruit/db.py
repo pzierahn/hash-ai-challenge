@@ -7,13 +7,16 @@ from tqdm import tqdm
 
 
 class CandidatesDB:
-    people: dict[int, dict] = {}
+    db_path: str
+    people: dict[int, dict]
 
     def __init__(self, db_path: str = "../spi/coresignal/employee_multi_source"):
         self.db_path = db_path
-        self.people = self.load_people()
+        self.people = {}
+        self.load_people()
 
     def load_people(self) -> dict[int, dict]:
+        self.people = {}
         files = os.listdir(self.db_path)
 
         for file in files:
