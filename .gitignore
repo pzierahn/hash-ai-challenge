@@ -222,3 +222,5 @@ spi/
 
 # Ignore API Keys and other secrets
 .env
+
+**.DS_Store
