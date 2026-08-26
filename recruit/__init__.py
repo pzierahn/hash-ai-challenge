@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from hash-ai-challenge!")
+from .db import Candidates, CandidatesDB
+
+__all__ = ["Candidates", "CandidatesDB"]

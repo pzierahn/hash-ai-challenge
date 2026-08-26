@@ -16,6 +16,7 @@ dependencies = [
     "langchain-openai>=1.6.0",
     "pydantic>=2.13.4",
     "requests>=2.34.2",
+    "tqdm>=4.70.0",
 ]
 
 [build-system]
