@@ -27,13 +27,13 @@ class CandidatesDB:
 
         return self.people
 
-    def get_person(self, person_id: int) -> dict | None:
+    def get(self, person_id: int) -> dict | None:
         return self.people.get(person_id)
 
     def contains(self, person_id: int) -> bool:
         return person_id in self.people
 
-    def store_person(self, person: dict) -> None:
+    def store(self, person: dict) -> None:
         person_id = person["id"]
         self.people[person_id] = person
 
@@ -71,13 +71,13 @@ class Candidates:
             headers=headers,
         ).json()
 
-        self.db.store_person(response)
+        self.db.store(response)
 
         return response
 
     def get_person(self, person_id: int) -> dict | None:
         if self.db.contains(person_id):
-            return self.db.get_person(person_id)
+            return self.db.get(person_id)
 
         return self._fetch_person(person_id)
 
