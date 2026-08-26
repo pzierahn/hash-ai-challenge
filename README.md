@@ -47,7 +47,7 @@ spi/            Local candidate data, criteria, assessments, and CSV exports.
 docs/           Challenge brief, HASH mission, and Coresignal API schema reference.
 ```
 
-`recruit/db.py` caches fetched Coresignal profiles locally and fetches missing profiles on demand. `recruit/pydantic.py` defines the structured role-requirements schema, while `recruit/score.py` applies the deterministic score: required criteria count double, and candidates must receive at least a moderate rating on every required criterion to qualify for the shortlist.
+`recruit/db.py` caches fetched Coresignal profiles locally and fetches missing profiles on demand. `recruit/pydantic.py` defines the structured role-requirements schema, while `recruit/score.py` applies the deterministic score: each criterion is rated `strong` (3 points), `moderate` (2), or `weak` (1); a preferred criterion with no supporting evidence (`none`) scores -3. Required-criterion points are doubled so they count twice as heavily as preferred criteria. Candidates must be rated `strong` or `moderate` on every required criterion to qualify for the shortlist.
 
 ## Processing Steps
 
